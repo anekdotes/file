@@ -125,4 +125,9 @@ class FileTest extends PHPUnit_Framework_TestCase
         $this->assertTrue(File::deleteDirectory($path), "{$path} couldn't not be deleted");
     }
 
+    public function testCheckIfFileSizeWorksOnFile()
+    {
+        $this->assertGreaterThan(0, File::size(__DIR__ . "/dummy/dummy.jpg"));
+    }
+
 }

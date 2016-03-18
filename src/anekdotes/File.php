@@ -15,6 +15,10 @@ class File {
     return file_put_contents($path, $contents);
   }
 
+  public static function size($path) {
+    return filesize($path);
+  }
+
   public static function delete($path) {
     return unlink($path);
   }
