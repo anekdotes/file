@@ -22,7 +22,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Anekdotes\\File\\": "src"
+            "Anekdotes\\File\\": "src/anekdotes"
         }
     }
 }
