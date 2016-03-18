@@ -1,0 +1,28 @@
+{
+    "name": "anekdotes/file",
+    "type": "library",
+    "description": "Provides an easier way to manipulate file for common use like move,rename etc.",
+    "keywords": [
+        "file",
+        "rename",
+        "move",
+        "directory"
+    ],
+    "homepage": "https://github.com/anekdotes/file",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "authors": [
+        {
+            "name": "Mathieu Gosselin",
+            "email": "mathieu.gosselin@anekdotes.com",
+            "homepage": "http://anekdotes.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Anekdotes\\File\\": "src"
+        }
+    }
+}
