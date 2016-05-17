@@ -65,18 +65,13 @@ class File
         }
 
         return array_filter($glob, function ($file) {
-      return filetype($file) == 'file';
-    });
+          return filetype($file) == 'file';
+        });
     }
 
     public static function isFile($file)
     {
         return is_file($file);
-    }
-
-    public static function glob($pattern, $flags = 0)
-    {
-        return glob($pattern, $flags);
     }
 
     public static function makeDirectory($path, $mode = 0777, $recursive = false)

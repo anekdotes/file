@@ -98,13 +98,13 @@ class FileTest extends PHPUnit_Framework_TestCase
         $this->assertNotEmpty(File::makeDirectory($path), "{$path} cannot be created}");
     }
 
-    public function testCheckIfFileFilesNotEmptyWorks()
+    public function testFiles1()
     {
         $path = __DIR__.'/dummy/';
         $this->assertNotEmpty(File::files($path), "{$path} has no files}");
     }
 
-    public function testCheckIfFileFilesEmptyWorks()
+    public function testFiles2()
     {
         $path = __DIR__.'/dummy/tmp/';
         $this->assertEmpty(File::files($path), "{$path} has files}");
@@ -122,10 +122,26 @@ class FileTest extends PHPUnit_Framework_TestCase
         $this->assertTrue(File::isFile($path), "{$path} is not a file");
     }
 
-    public function testCheckIfFileDeleteDirectoryWorks()
+    public function testDeleteDirectory1()
     {
         $path = __DIR__.'/dummy/tmp';
         $this->assertTrue(File::deleteDirectory($path), "{$path} couldn't not be deleted");
+    }
+
+    public function testDeleteDirectory2()
+    {
+        $path = __DIR__.'/dummy/dummy.jpg';
+        $this->assertFalse(File::deleteDirectory($path));
+    }
+
+    public function testDeleteDirectory3()
+    {
+        File::makeDirectory(__DIR__.'/dummy/tmp2');
+        File::copy(__DIR__.'/dummy/dummy.jpg', __DIR__.'/dummy/tmp2/dummy.jpg');
+        File::makeDirectory(__DIR__.'/dummy/tmp2/test');
+        File::copy(__DIR__.'/dummy/dummy.jpg', __DIR__.'/dummy/tmp2/test/dummy.jpg');
+        $path = __DIR__.'/dummy/tmp2/';
+        $this->assertTrue(File::deleteDirectory($path));
     }
 
     public function testCheckIfFileSizeWorksOnFile()
