@@ -2,6 +2,8 @@
 
 [![Latest Stable Version](https://poser.pugx.org/anekdotes/file/v/stable)](https://packagist.org/packages/anekdotes/file)
 [![Build Status](https://travis-ci.org/anekdotes/file.svg?branch=master)](https://travis-ci.org/anekdotes/file)
+[![codecov.io](https://codecov.io/gh/anekdotes/file/branch/master/graph/badge.svg)](https://codecov.io/github/anekdotes/file?branch=master)
+[![StyleCI](https://styleci.io/repos/54150642/shield?style=flat)](https://styleci.io/repos/54150642)
 [![License](https://poser.pugx.org/anekdotes/file/license)](https://packagist.org/packages/anekdotes/file)
 [![Total Downloads](https://poser.pugx.org/anekdotes/file/downloads)](https://packagist.org/packages/anekdotes/file)
 
