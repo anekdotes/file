@@ -1,9 +1,13 @@
-<?php namespace Anekdotes\File;
+<?php
 
-class File {
+namespace Anekdotes\File;
+
+class File
+{
 
   public static function get($path, $default = null) {
     $default = $default instanceof Closure ? $default() : $default;
+
     return (file_exists($path)) ? file_get_contents($path) : $default;
   }
 
@@ -79,6 +83,7 @@ class File {
     }
 
     if ( ! $preserve) @rmdir($directory);
+
     return true;
   }
 

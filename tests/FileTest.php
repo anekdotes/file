@@ -1,5 +1,9 @@
-<?php namespace Tests;
-use PHPUnit_Framework_TestCase; use Anekdotes\File\File;
+<?php
+
+namespace Tests;
+
+use PHPUnit_Framework_TestCase;
+use Anekdotes\File\File;
 
 class FileTest extends PHPUnit_Framework_TestCase
 {
