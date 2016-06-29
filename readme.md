@@ -22,7 +22,7 @@ composer require anekdotes/file
 Use the class where ever you need it:
 
 ```
-use Anekdotes\Manager\File;
+use Anekdotes\File\File;
 ```
 
 ### Methods
@@ -67,7 +67,7 @@ Get the file size in bytes.
 * **$path**: path of the file
 
 ```
-size($path)
+File::size($path)
 ```
 
 #### delete
@@ -77,7 +77,7 @@ Delete a file.
 * **$path**: path of the file
 
 ```
-delete($path)
+File::delete($path)
 ```
 
 #### move
@@ -88,7 +88,7 @@ Move/rename a file.
 * **$target**: target of the file
 
 ```
-move($path, $target)
+File::move($path, $target)
 ```
 
 #### copy
@@ -99,7 +99,7 @@ Copy a file.
 * **$target**: target of the file
 
 ```
-copy($path, $target)
+File::copy($path, $target)
 ```
 
 #### extension
@@ -109,7 +109,7 @@ Get the file extension.
 * **$path**: path of the file
 
 ```
-extension($path)
+File::extension($path)
 ```
 
 #### isDirectory
@@ -129,7 +129,7 @@ Returns an array of all folders inside a directory
 * **$path**: path of the directory
 
 ```
-directories($path)
+File::directories($path)
 ```
 
 #### files
@@ -139,7 +139,7 @@ Returns an array of all files inside a directory
 * **$directory**: path of the directory
 
 ```
-files($directory)
+File::files($directory)
 ```
 
 #### isFile
@@ -149,7 +149,7 @@ Check if path is a file.
 * **$path**: path of the file
 
 ```
-isFile($file)
+File::isFile($file)
 ```
 
 #### makeDirectory
@@ -160,7 +160,7 @@ Create a directory.
 * **$mode**: folder mod
 
 ```
-makeDirectory($path, $mode = 0777)
+File::makeDirectory($path, $mode = 0777)
 ```
 
 #### deleteDirectory
@@ -170,5 +170,5 @@ Delete a directory.
 * **$directory**: path of directory
 
 ```
-deleteDirectory($directory)
+File::deleteDirectory($directory)
 ```
