@@ -65,7 +65,7 @@ class File
         }
 
         return array_filter($glob, function ($file) {
-          return filetype($file) == 'file';
+            return filetype($file) == 'file';
         });
     }
 
