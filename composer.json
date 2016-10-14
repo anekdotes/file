@@ -1,5 +1,6 @@
 {
     "name": "anekdotes/file",
+    "version": "1.0.3",
     "type": "library",
     "description": "Provides an easier way to manipulate file for common use like move,rename etc.",
     "keywords": [
