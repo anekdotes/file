@@ -122,6 +122,16 @@ Check if path is a directory.
 isDirectory($directory)
 ```
 
+#### glob
+
+Returns an array of all files/folder inside a directory
+
+* **$path**: path of the directory
+
+```
+File::glob($path)
+```
+
 #### directories
 
 Returns an array of all folders inside a directory

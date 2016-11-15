@@ -51,6 +51,11 @@ class File
         return is_dir($directory);
     }
 
+    public static function glob($path)
+    {
+        return glob($path);
+    }
+
     public static function directories($path)
     {
         return glob($path.'*', GLOB_ONLYDIR);

@@ -148,4 +148,9 @@ class FileTest extends PHPUnit_Framework_TestCase
     {
         $this->assertGreaterThan(0, File::size(__DIR__.'/dummy/dummy.jpg'));
     }
+
+    public function testCheckGlob()
+    {
+        $this->assertEquals(count(File::glob(__DIR__.'/dummy/*')), 1);
+    }
 }
