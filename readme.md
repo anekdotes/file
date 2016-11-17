@@ -7,7 +7,7 @@
 [![License](https://poser.pugx.org/anekdotes/file/license)](https://packagist.org/packages/anekdotes/file)
 [![Total Downloads](https://poser.pugx.org/anekdotes/file/downloads)](https://packagist.org/packages/anekdotes/file)
 
-A library that provides an easy way to manipulate file for common use like move,rename etc.
+A library that provides an easy way to manipulate files for common uses such as move, rename etc.
 
 ## Installation
 
@@ -21,13 +21,15 @@ composer require anekdotes/file
 
 Use the class where ever you need it:
 
-```
+```php
 use Anekdotes\File\File;
 ```
 
+Note : This requires autoloading namespaces. Using composer to do autoloading helps a lot.
+
 ### Methods
 
-Multiple methods are availables:
+Multiple static methods are available:
 
 #### get
 
@@ -36,7 +38,7 @@ Get the content of a file.
 * **$path**: path of the file
 * **$default**: closure or string
 
-```
+```php
     File::get($path, $default = null);
 ```
 
@@ -46,7 +48,7 @@ Check if file exists.
 
 * **$path**: path of the file
 
-```
+```php
     File::exists($path)
 ```
 #### Put
@@ -56,7 +58,7 @@ Create a new file.
 * **$path**: path of the desired file location
 * **$contents**: content of the file
 
-```
+```php
     File::put($path, $contents)
 ```
 
@@ -66,7 +68,7 @@ Get the file size in bytes.
 
 * **$path**: path of the file
 
-```
+```php
 File::size($path)
 ```
 
@@ -76,7 +78,7 @@ Delete a file.
 
 * **$path**: path of the file
 
-```
+```php
 File::delete($path)
 ```
 
@@ -87,7 +89,7 @@ Move/rename a file.
 * **$path**: path of the file to move
 * **$target**: target of the file
 
-```
+```php
 File::move($path, $target)
 ```
 
@@ -98,7 +100,7 @@ Copy a file.
 * **$path**: path of the file to copy
 * **$target**: target of the file
 
-```
+```php
 File::copy($path, $target)
 ```
 
@@ -110,7 +112,7 @@ Get the file extension.
 
 ```
 File::extension($path)
-```
+```php
 
 #### isDirectory
 
@@ -118,7 +120,7 @@ Check if path is a directory.
 
 * **$path**: path of the directory
 
-```
+```php
 isDirectory($directory)
 ```
 
@@ -128,7 +130,7 @@ Returns an array of all files/folder inside a directory
 
 * **$path**: path of the directory
 
-```
+```php
 File::glob($path)
 ```
 
@@ -138,7 +140,7 @@ Returns an array of all folders inside a directory
 
 * **$path**: path of the directory
 
-```
+```php
 File::directories($path)
 ```
 
@@ -148,7 +150,7 @@ Returns an array of all files inside a directory
 
 * **$directory**: path of the directory
 
-```
+```php
 File::files($directory)
 ```
 
@@ -158,7 +160,7 @@ Check if path is a file.
 
 * **$path**: path of the file
 
-```
+```php
 File::isFile($file)
 ```
 
@@ -169,7 +171,7 @@ Create a directory.
 * **$path**: desired path
 * **$mode**: folder mod
 
-```
+```php
 File::makeDirectory($path, $mode = 0777)
 ```
 
@@ -179,6 +181,6 @@ Delete a directory.
 
 * **$directory**: path of directory
 
-```
+```php
 File::deleteDirectory($directory)
 ```
