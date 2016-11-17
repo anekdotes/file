@@ -39,7 +39,7 @@ Get the content of a file.
 * **$default**: closure or string
 
 ```php
-    File::get($path, $default = null);
+File::get($path, $default = null);
 ```
 
 #### exists
@@ -49,7 +49,7 @@ Check if file exists.
 * **$path**: path of the file
 
 ```php
-    File::exists($path)
+File::exists($path)
 ```
 #### Put
 
@@ -59,7 +59,7 @@ Create a new file.
 * **$contents**: content of the file
 
 ```php
-    File::put($path, $contents)
+File::put($path, $contents)
 ```
 
 #### size
