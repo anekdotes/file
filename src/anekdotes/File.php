@@ -91,6 +91,7 @@ class File
         }
 
         $items = new \FilesystemIterator($directory);
+        
         foreach ($items as $item) {
             if ($item->isDir()) {
                 self::deleteDirectory($item->getPathname());

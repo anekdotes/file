@@ -3,3 +3,4 @@ composer.lock
 tests/cache
 .git
 .DS_Store
+.phpunit.result.cache
